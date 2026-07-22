@@ -8,9 +8,9 @@ export default function GalleryPage() {
       <SectionHeading eyebrow="Gallery" title="A scrapbook of visual moods" description="This gallery is intentionally structured for future edits, with space for your own photography, finished pieces, and process images." />
       <div className="mt-10 grid gap-6 md:grid-cols-2">
         {galleryItems.map((item) => (
-          <div key={item.title} className="rounded-[2rem] border border-black/10 bg-[#fdf6eb] p-5">
+          <div key={item.title} className="rounded-[2rem] border border-[#ff7a1a]/20 bg-[#1a1a1a] p-5">
             <PlaceholderFrame label={item.title} className="min-h-[260px]" />
-            <p className="mt-4 text-xs uppercase tracking-[0.3em] text-[#7ED957]">{item.category}</p>
+            <p className="mt-4 text-xs uppercase tracking-[0.3em] text-[#ff7a1a]">{item.category}</p>
           </div>
         ))}
       </div>

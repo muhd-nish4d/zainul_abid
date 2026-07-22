@@ -8,9 +8,9 @@ export default function ProjectsPage() {
       <SectionHeading eyebrow="Projects" title="A portfolio ready for your next chapter" description="The layouts below are intentionally polished placeholders so your real case studies can be dropped in later without redesigning the structure." />
       <div className="mt-10 grid gap-8 lg:grid-cols-2">
         {projects.map((project, index) => (
-          <div key={project.title} className="rounded-[2.5rem] border border-black/10 bg-[#fdf6eb] p-6 shadow-[12px_12px_0_rgba(0,0,0,0.06)]">
+          <div key={project.title} className="rounded-[2.5rem] border border-[#ff7a1a]/20 bg-[#1a1a1a] p-6 shadow-[12px_12px_0_rgba(255,122,26,0.08)]">
             <div className="mb-6 flex items-center justify-between">
-              <span className="text-xs uppercase tracking-[0.35em] text-[#7ED957]">0{index + 1}</span>
+              <span className="text-xs uppercase tracking-[0.35em] text-[#ff7a1a]">0{index + 1}</span>
               <span className="rounded-full border border-black/10 bg-white/80 px-3 py-1 text-[10px] uppercase tracking-[0.3em]">{project.category}</span>
             </div>
             <PlaceholderFrame label={project.title} className="min-h-[280px]" />

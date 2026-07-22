@@ -7,7 +7,7 @@ export default function TestimonialsPage() {
       <SectionHeading eyebrow="Testimonials" title="Kind words from collaborators" description="A small selection of professional impressions from people who valued the process and outcome." />
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {testimonials.map((item) => (
-          <div key={item.author} className="rounded-[2rem] border border-black/10 bg-[#fdf6eb] p-8">
+          <div key={item.author} className="rounded-[2rem] border border-[#ff7a1a]/20 bg-[#1a1a1a] p-8">
             <p className="text-base leading-8 text-black/70">“{item.quote}”</p>
             <div className="mt-8">
               <p className="text-sm font-semibold uppercase tracking-[0.2em]">{item.author}</p>

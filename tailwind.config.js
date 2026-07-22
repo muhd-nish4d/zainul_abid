@@ -4,14 +4,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
-        display: ['Syne', 'sans-serif'],
-        mono: ['Space Grotesk', 'sans-serif'],
+        sans: ['Comfortaa', 'cursive'],
+        display: ['Comfortaa', 'cursive'],
+        mono: ['Comfortaa', 'cursive'],
       },
       colors: {
-        accent: '#7ED957',
-        cream: '#f7efe6',
-        parchment: '#fdf6eb',
+        accent: '#ff7a1a',
+        cream: '#f5e9db',
+        parchment: '#171717',
       },
     },
   },

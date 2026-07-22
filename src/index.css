@@ -1,13 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&family=Syne:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: 'Poppins', sans-serif;
-  color: #151515;
-  background-color: #f7efe6;
+  font-family: 'Comfortaa', cursive;
+  color: #f5e9db;
+  background-color: #060606;
+  --bg: #060606;
+  --bg-soft: #101010;
+  --surface: #171717;
+  --surface-2: #1f1f1f;
+  --text: #f5e9db;
+  --muted: #b6a892;
+  --accent: #ff7a1a;
+  --accent-soft: rgba(255, 122, 26, 0.16);
+  --border: rgba(255, 122, 26, 0.24);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -22,7 +31,8 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f7efe6 0%, #f4e8d8 100%);
+  background: radial-gradient(circle at top left, rgba(255, 122, 26, 0.16), transparent 28%), linear-gradient(135deg, #060606 0%, #111111 100%);
+  color: var(--text);
 }
 
 * {
@@ -34,6 +44,55 @@ body {
 }
 
 ::selection {
-  background: #7ED957;
-  color: #151515;
+  background: var(--accent);
+  color: #060606;
+}
+
+.bg-\[\#f7efe6\],
+.bg-\[\#f2e7d5\],
+.bg-\[\#fdf6eb\],
+.bg-\[\#fefbf7\],
+.bg-\[\#f9f2e7\],
+.bg-\[\#f8efe1\],
+.bg-\[\#efe3cf\] {
+  background-color: var(--surface) !important;
+}
+
+.bg-\[\#151515\] {
+  background-color: var(--surface-2) !important;
+}
+
+.text-\[\#151515\] {
+  color: var(--text) !important;
+}
+
+.text-\[\#7ED957\] {
+  color: var(--accent) !important;
+}
+
+.hover\:text-\[\#7ED957\]\:hover,
+.hover\:text-\[\#7ED957\]\:focus-visible {
+  color: var(--accent) !important;
+}
+
+.border-black\/10,
+.border-black\/15,
+.border-black\/20 {
+  border-color: var(--border) !important;
+}
+
+.text-black\/70 {
+  color: rgba(245, 233, 219, 0.75) !important;
+}
+
+.text-black\/60 {
+  color: rgba(245, 233, 219, 0.68) !important;
+}
+
+.text-black\/50 {
+  color: rgba(245, 233, 219, 0.6) !important;
+}
+
+.text-black\/40 {
+  color: rgba(245, 233, 219, 0.5) !important;
 }

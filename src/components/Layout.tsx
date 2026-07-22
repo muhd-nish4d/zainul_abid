@@ -9,16 +9,16 @@ export default function Layout({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#f7efe6] text-[#151515]">
+    <div className="relative min-h-screen overflow-hidden bg-[#060606] text-[#f5e9db]">
       <AnimatedBackground />
-      <header className="sticky top-0 z-40 border-b border-black/10 bg-[#f7efe6]/90 backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-[#ff7a1a]/20 bg-[#0b0b0b]/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <Link to="/" className="text-lg font-semibold tracking-[0.35em] text-[#151515] uppercase">
+          <Link to="/" className="text-lg font-semibold tracking-[0.35em] text-[#f5e9db] uppercase">
             {profile.brandName}
           </Link>
           <nav className="hidden items-center gap-5 text-sm uppercase tracking-[0.25em] md:flex">
             {navLinks.map((link) => (
-              <NavLink key={link.to} to={link.to} className={({ isActive }) => `transition ${isActive ? 'text-[#7ED957]' : 'hover:text-[#7ED957]'}`}>
+              <NavLink key={link.to} to={link.to} className={({ isActive }) => `transition ${isActive ? 'text-[#ff7a1a]' : 'hover:text-[#ff7a1a]'}`}>
                 {link.label}
               </NavLink>
             ))}
@@ -28,10 +28,10 @@ export default function Layout({ children }: { children: ReactNode }) {
           </button>
         </div>
         {open && (
-          <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="border-t border-black/10 bg-[#f7efe6] px-4 py-4 md:hidden">
+          <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="border-t border-[#ff7a1a]/20 bg-[#0b0b0b] px-4 py-4 md:hidden">
             <div className="flex flex-col gap-3 text-sm uppercase tracking-[0.25em]">
               {navLinks.map((link) => (
-                <NavLink key={link.to} to={link.to} className={({ isActive }) => `transition ${isActive ? 'text-[#7ED957]' : 'hover:text-[#7ED957]'}`} onClick={() => setOpen(false)}>
+                <NavLink key={link.to} to={link.to} className={({ isActive }) => `transition ${isActive ? 'text-[#ff7a1a]' : 'hover:text-[#ff7a1a]'}`} onClick={() => setOpen(false)}>
                   {link.label}
                 </NavLink>
               ))}
@@ -42,7 +42,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 
       <main>{children}</main>
 
-      <footer className="border-t border-black/10 bg-[#f2e7d5]">
+      <footer className="border-t border-[#ff7a1a]/20 bg-[#101010]">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-8 text-sm uppercase tracking-[0.2em] text-black/70 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <p>© 2026 {profile.brandName}. Crafted for impact.</p>
           <div className="flex gap-4">

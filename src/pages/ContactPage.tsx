@@ -9,16 +9,16 @@ export default function ContactPage() {
         <div>
           <SectionHeading eyebrow="Contact" title="Let’s create something memorable" description="Open to collaborations, commissions, and design opportunities that need care, rhythm, and strong visual thinking." />
           <div className="mt-8 space-y-4">
-            <a href={`mailto:${profile.email}`} className="flex items-center gap-3 text-lg text-black/70 hover:text-[#7ED957]"><FiMail /> {profile.email}</a>
-            <a href={`tel:${profile.phone}`} className="flex items-center gap-3 text-lg text-black/70 hover:text-[#7ED957]"><FiPhone /> {profile.phone}</a>
-            <a href={profile.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-3 text-lg text-black/70 hover:text-[#7ED957]"><FiMessageCircle /> Instagram</a>
-            <div className="flex items-center gap-3 text-lg text-black/70"><FiMapPin /> {profile.location}</div>
+            <a href={`mailto:${profile.email}`} className="flex items-center gap-3 text-lg text-[#f5e9db]/80 hover:text-[#ff7a1a]"><FiMail /> {profile.email}</a>
+            <a href={`tel:${profile.phone}`} className="flex items-center gap-3 text-lg text-[#f5e9db]/80 hover:text-[#ff7a1a]"><FiPhone /> {profile.phone}</a>
+            <a href={profile.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-3 text-lg text-[#f5e9db]/80 hover:text-[#ff7a1a]"><FiMessageCircle /> Instagram</a>
+            <div className="flex items-center gap-3 text-lg text-[#f5e9db]/80"><FiMapPin /> {profile.location}</div>
           </div>
         </div>
-        <div className="rounded-[2.5rem] border border-black/10 bg-[#fdf6eb] p-8">
+        <div className="rounded-[2.5rem] border border-[#ff7a1a]/20 bg-[#1a1a1a] p-8">
           <h3 className="text-2xl font-semibold uppercase tracking-[0.2em]">Quick Notes</h3>
-          <p className="mt-5 text-base leading-8 text-black/70">Available for branding, campaign design, editorial systems, social visuals, and polished print work. If you need a thoughtful creative partner, reach out and I’ll respond with a tailored approach.</p>
-          <a href={`mailto:${profile.email}`} className="mt-8 inline-flex rounded-full bg-[#151515] px-6 py-3 text-sm uppercase tracking-[0.3em] text-white transition hover:bg-[#7ED957] hover:text-[#151515]">Start a conversation</a>
+          <p className="mt-5 text-base leading-8 text-[#f5e9db]/80">Available for branding, campaign design, editorial systems, social visuals, and polished print work. If you need a thoughtful creative partner, reach out and I’ll respond with a tailored approach.</p>
+          <a href={`mailto:${profile.email}`} className="mt-8 inline-flex rounded-full bg-[#ff7a1a] px-6 py-3 text-sm uppercase tracking-[0.3em] text-[#060606] transition hover:bg-[#ff9f4a]">Start a conversation</a>
         </div>
       </div>
     </div>
