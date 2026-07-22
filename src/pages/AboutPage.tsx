@@ -1,40 +1,44 @@
-import PlaceholderFrame from '../components/PlaceholderFrame';
+import { motion } from 'framer-motion';
 import SectionHeading from '../components/SectionHeading';
+import heroImage from '../assets/hero.jpeg';
 import { aboutSections, profile, skills, software } from '../data/content';
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-      <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-        <div>
+    <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
           <SectionHeading eyebrow="About" title="The maker behind the work" description="A designer focused on brand clarity, story, and visual rhythm." />
-          <p className="text-lg leading-9 text-black/70">{profile.bio[0]}</p>
-          <p className="mt-5 text-lg leading-9 text-black/70">{profile.bio[1]}</p>
+          <p className="text-base leading-8 text-[#f5e9db]/80">{profile.bio[0]}</p>
+          <p className="mt-5 text-base leading-8 text-[#f5e9db]/80">{profile.bio[1]}</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-[2rem] border border-[#ff7a1a]/20 bg-[#1a1a1a] p-6">
-              <p className="text-xs uppercase tracking-[0.35em] text-[#ff7a1a]">Experience</p>
+            <div className="rounded-[1.5rem] border border-white/10 bg-black/25 p-6">
+              <p className="text-[0.7rem] uppercase tracking-[0.35em] text-[#ff7a1a]">Experience</p>
               <p className="mt-3 text-3xl font-semibold">{profile.experienceYears}</p>
             </div>
-            <div className="rounded-[2rem] border border-[#ff7a1a]/20 bg-[#1a1a1a] p-6">
-              <p className="text-xs uppercase tracking-[0.35em] text-[#ff7a1a]">Current Role</p>
+            <div className="rounded-[1.5rem] border border-white/10 bg-black/25 p-6">
+              <p className="text-[0.7rem] uppercase tracking-[0.35em] text-[#ff7a1a]">Current Role</p>
               <p className="mt-3 text-3xl font-semibold">{profile.currentRole}</p>
             </div>
           </div>
-        </div>
-        <PlaceholderFrame label="Add About Image" className="min-h-[440px]" />
+        </motion.div>
+
+        <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }} className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3 backdrop-blur-xl">
+          <img src={heroImage} alt="Portrait" className="h-full min-h-[420px] w-full rounded-[1.4rem] object-cover object-center" />
+        </motion.div>
       </div>
 
-      <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {aboutSections.map((section) => (
-          <div key={section.title} className="rounded-[2rem] border border-[#ff7a1a]/20 bg-[#1a1a1a] p-7">
+          <motion.div key={section.title} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="rounded-[1.75rem] border border-white/10 bg-white/5 p-7 backdrop-blur-xl">
             <h3 className="text-lg font-semibold uppercase tracking-[0.2em]">{section.title}</h3>
-            <p className="mt-4 text-sm leading-8 text-black/70">{section.content}</p>
-          </div>
+            <p className="mt-4 text-sm leading-8 text-[#f5e9db]/75">{section.content}</p>
+          </motion.div>
         ))}
       </div>
 
-      <div className="mt-16 grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-        <div className="rounded-[2.5rem] border border-[#ff7a1a]/20 bg-[#1a1a1a] p-8">
+      <div className="mt-8 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+        <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
           <h3 className="text-2xl font-semibold uppercase tracking-[0.2em]">Software</h3>
           <div className="mt-8 space-y-5">
             {software.map((tool) => (
@@ -49,15 +53,16 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-        </div>
-        <div className="rounded-[2.5rem] border border-[#ff7a1a]/20 bg-[#171717] p-8">
+        </motion.div>
+
+        <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-[#ff7a1a]/12 to-transparent p-8 backdrop-blur-xl">
           <h3 className="text-2xl font-semibold uppercase tracking-[0.2em]">Skills</h3>
           <div className="mt-8 flex flex-wrap gap-3">
             {skills.map((skill) => (
-              <span key={skill} className="rounded-full border border-[#ff7a1a]/20 bg-[#222222] px-4 py-2 text-sm uppercase tracking-[0.2em]">{skill}</span>
+              <span key={skill} className="rounded-full border border-white/10 bg-black/30 px-4 py-2 text-sm uppercase tracking-[0.2em]">{skill}</span>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

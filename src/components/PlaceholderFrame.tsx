@@ -5,10 +5,10 @@ interface PlaceholderFrameProps {
 
 export default function PlaceholderFrame({ label, className = '' }: PlaceholderFrameProps) {
   return (
-    <div className={`group relative overflow-hidden rounded-[2rem] border border-[#ff7a1a]/20 bg-[#171717] p-6 shadow-[10px_10px_0_rgba(255,122,26,0.1)] ${className}`}>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(126,217,87,0.15),_transparent_55%)]" />
-      <div className="relative flex min-h-[220px] flex-col items-start justify-between rounded-[1.5rem] border border-dashed border-[#ff7a1a]/20 bg-[#111111] p-6">
-        <span className="rounded-full border border-[#ff7a1a]/20 bg-[#1d1d1d] px-3 py-1 text-[10px] uppercase tracking-[0.35em] text-[#f5e9db]/70">
+    <div className={`group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.25)] backdrop-blur-xl ${className}`}>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,122,26,0.3),_transparent_60%)]" />
+      <div className="relative flex min-h-[220px] flex-col items-start justify-between rounded-[1.5rem] border border-white/10 bg-[#0f0f0f]/80 p-6">
+        <span className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[10px] uppercase tracking-[0.35em] text-[#f5e9db]/70">
           Placeholder
         </span>
         <div>
