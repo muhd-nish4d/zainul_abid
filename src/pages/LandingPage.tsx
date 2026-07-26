@@ -19,43 +19,101 @@ export default function LandingPage() {
 
   return (
     <div className="overflow-hidden bg-transparent">
-      <section className="relative flex min-h-[100svh] items-center overflow-hidden px-4 pb-8 pt-24 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,122,26,0.18),_transparent_36%),radial-gradient(circle_at_85%_20%,_rgba(255,255,255,0.06),_transparent_24%)]" />
-        <motion.div initial={{ opacity: 0, scale: 1.04 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9 }} className="absolute inset-0 overflow-hidden">
-          <img src={heroImage} alt={`${profile.name} portrait`} className="h-full w-full object-cover object-center" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#060606] via-[#060606]/75 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#060606] via-[#060606]/15 to-transparent" />
-        </motion.div>
+      <section className="relative flex min-h-[100svh] items-end overflow-hidden px-4 pb-8 pt-24 sm:px-6 lg:items-center lg:px-8">
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,122,26,0.18),_transparent_36%),radial-gradient(circle_at_85%_20%,_rgba(255,255,255,0.06),_transparent_24%)]" />
 
-        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col justify-end gap-8 lg:flex-row lg:items-end lg:justify-between">
-          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-2xl rounded-[2rem] border border-white/10 bg-black/25 p-6 backdrop-blur-xl sm:p-8 lg:p-10" data-reveal>
-            <p className="mb-5 text-[0.7rem] uppercase tracking-[0.4em] text-[#ff7a1a]">{profile.nickname} • {profile.currentRole}</p>
-            <h1 className="text-5xl font-black uppercase leading-[0.86] tracking-[0.16em] sm:text-6xl lg:text-7xl">
-              {profile.name}
-            </h1>
-            <p className="mt-6 max-w-xl text-base leading-8 text-[#f5e9db]/80">{profile.tagline}</p>
-            {/* <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/contact" className="group inline-flex items-center gap-2 rounded-full bg-[#ff7a1a] px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-[#060606] transition hover:bg-[#ff9f4a]">
-                Let&apos;s work together <FiArrowRight className="transition group-hover:translate-x-1" />
-              </Link>
-              <a href={profile.resumeUrl} className="rounded-full border border-white/15 px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-[#f5e9db] transition hover:border-[#ff7a1a] hover:text-[#ff7a1a]">
-                Download Resume
-              </a>
-            </div> */}
-            <div className="mt-8 flex flex-wrap gap-4 text-[0.72rem] uppercase tracking-[0.25em] text-[#f5e9db]/70">
-              <a href={profile.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-2 transition hover:text-[#ff7a1a]"> <FiInstagram /> Instagram</a>
-              <a href={`mailto:${profile.email}`} className="flex items-center gap-2 transition hover:text-[#ff7a1a]"> <FiMail /> Email</a>
-            </div>
-          </motion.div>
+  <motion.div
+    initial={{ opacity: 0, scale: 1.04 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.9 }}
+    className="absolute inset-0 overflow-hidden"
+  >
+    <img
+      src={heroImage}
+      alt={`${profile.name} portrait`}
+      className="h-full w-full object-cover object-center"
+    />
 
-          <motion.div initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} onMouseMove={handleTilt} onMouseLeave={() => setTilt({ rotateX: 0, rotateY: 0 })} className="hidden w-[320px] max-w-[34vw] self-end lg:block" data-reveal>
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 p-3 shadow-[0_30px_90px_rgba(0,0,0,0.45)] backdrop-blur-xl">
-              <img src={heroImage} alt="Creative portrait" className="h-[480px] w-full rounded-[1.4rem] object-cover object-center" style={{ transform: `perspective(1200px) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)` }} />
-              <div className="absolute inset-x-6 bottom-6 h-20 rounded-full bg-[#ff7a1a]/20 blur-3xl" />
-            </div>
-          </motion.div>
-        </div>
-      </section>
+    <div className="absolute inset-0 bg-gradient-to-r from-[#060606] via-[#060606]/75 to-transparent lg:from-[#060606] lg:via-[#060606]/75 lg:to-transparent" />
+
+    <div className="absolute inset-0 bg-gradient-to-t from-[#060606] via-[#060606]/20 to-transparent" />
+  </motion.div>
+
+  <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col justify-end gap-8 pb-4 lg:flex-row lg:items-end lg:justify-between lg:pb-0">
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      data-reveal
+      className="
+        max-w-2xl
+        p-0
+        sm:p-6
+        lg:p-10
+        lg:rounded-[2rem]
+        lg:border
+        lg:border-white/10
+        lg:bg-black/25
+        lg:backdrop-blur-xl
+      "
+    >
+      <p className="mb-5 text-[0.7rem] tracking-[0.35em] text-[#ff7a1a]">
+        {profile.nickname} • {profile.currentRole}
+      </p>
+
+      <h1 className="text-5xl font-black leading-[0.9] tracking-[0.05em] sm:text-6xl lg:text-7xl">
+        {profile.name}
+      </h1>
+
+      <p className="mt-6 max-w-xl text-base leading-7 text-[#f5e9db]/80">
+        {profile.tagline}
+      </p>
+
+      <div className="mt-8 flex flex-wrap gap-4 text-[0.72rem] tracking-[0.18em] text-[#f5e9db]/70">
+        <a
+          href={profile.instagram}
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center gap-2 transition hover:text-[#ff7a1a]"
+        >
+          <FiInstagram />
+          Instagram
+        </a>
+
+        <a
+          href={`mailto:${profile.email}`}
+          className="flex items-center gap-2 transition hover:text-[#ff7a1a]"
+        >
+          <FiMail />
+          Email
+        </a>
+      </div>
+    </motion.div>
+
+    <motion.div
+      initial={{ opacity: 0, x: 24 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      onMouseMove={handleTilt}
+      onMouseLeave={() => setTilt({ rotateX: 0, rotateY: 0 })}
+      className="hidden w-[320px] max-w-[34vw] self-end lg:block"
+      data-reveal
+    >
+      <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 p-3 shadow-[0_30px_90px_rgba(0,0,0,0.45)] backdrop-blur-xl">
+        <img
+          src={heroImage}
+          alt="Creative portrait"
+          className="h-[480px] w-full rounded-[1.4rem] object-cover object-center"
+          style={{
+            transform: `perspective(1200px) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)`,
+          }}
+        />
+
+        <div className="absolute inset-x-6 bottom-6 h-20 rounded-full bg-[#ff7a1a]/20 blur-3xl" />
+      </div>
+    </motion.div>
+  </div>
+</section>
 
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8" data-reveal>
         <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
