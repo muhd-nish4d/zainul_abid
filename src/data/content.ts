@@ -2,7 +2,7 @@ export const profile = {
   name: 'SAINUL ABID C',
   nickname: 'Zayn',
   brandName: 'Zainul Abid',
-  tagline: 'Creative & Detail-Oriented Graphic Designer',
+  tagline: 'Creative Graphic Designer',
   bio: [
     'I am a multidisciplinary designer with four years of experience shaping visual identities, marketing campaigns, and cultural storytelling across print and digital platforms. My work blends sharp layout thinking with a handcrafted sensibility that values narrative, rhythm, and human connection.',
     'From branding and editorial design to social campaigns and corporate collateral, I approach each project with curiosity, clarity, and a strong eye for detail. I enjoy turning ideas into thoughtful visuals that feel both refined and memorable.',

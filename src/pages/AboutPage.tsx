@@ -9,8 +9,8 @@ export default function AboutPage() {
       <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
           <SectionHeading eyebrow="About" title="The maker behind the work" description="A designer focused on brand clarity, story, and visual rhythm." />
-          <p className="text-base leading-8 text-[#f5e9db]/80">{profile.bio[0]}</p>
-          <p className="mt-5 text-base leading-8 text-[#f5e9db]/80">{profile.bio[1]}</p>
+          <p className="text-base leading-6 text-[#f5e9db]/80">{profile.bio[0]}</p>
+          <p className="mt-5 text-base leading-6 text-[#f5e9db]/80">{profile.bio[1]}</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <div className="rounded-[1.5rem] border border-white/10 bg-black/25 p-6">
               <p className="text-[0.7rem] uppercase tracking-[0.35em] text-[#ff7a1a]">Experience</p>
@@ -31,7 +31,7 @@ export default function AboutPage() {
       <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {aboutSections.map((section) => (
           <motion.div key={section.title} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="rounded-[1.75rem] border border-white/10 bg-white/5 p-7 backdrop-blur-xl">
-            <h3 className="text-lg font-semibold uppercase tracking-[0.2em]">{section.title}</h3>
+            <h3 className="text-lg font-semibold tracking-[0.2em]">{section.title}</h3>
             <p className="mt-4 text-sm leading-8 text-[#f5e9db]/75">{section.content}</p>
           </motion.div>
         ))}
@@ -43,7 +43,7 @@ export default function AboutPage() {
           <div className="mt-8 space-y-5">
             {software.map((tool) => (
               <div key={tool.name}>
-                <div className="mb-2 flex items-center justify-between text-sm uppercase tracking-[0.2em]">
+                <div className="mb-2 flex items-center justify-between text-sm tracking-[0.2em]">
                   <span>{tool.name}</span>
                   <span className="text-[#ff7a1a]">{tool.score}</span>
                 </div>
@@ -59,7 +59,7 @@ export default function AboutPage() {
           <h3 className="text-2xl font-semibold uppercase tracking-[0.2em]">Skills</h3>
           <div className="mt-8 flex flex-wrap gap-3">
             {skills.map((skill) => (
-              <span key={skill} className="rounded-full border border-white/10 bg-black/30 px-4 py-2 text-sm uppercase tracking-[0.2em]">{skill}</span>
+              <span key={skill} className="rounded-full border border-white/10 bg-black/30 px-4 py-2 text-sm tracking-[0.2em]">{skill}</span>
             ))}
           </div>
         </motion.div>

@@ -13,7 +13,7 @@ export default function ServicesPage() {
               <span className="text-[0.7rem] uppercase tracking-[0.35em] text-[#ff7a1a]">0{index + 1}</span>
               <div className="h-2.5 w-2.5 rounded-full bg-[#ff7a1a]" />
             </div>
-            <h3 className="text-xl font-semibold uppercase tracking-[0.2em]">{service.title}</h3>
+            <h3 className="text-xl font-semibold tracking-[0.2em]">{service.title}</h3>
             <p className="mt-4 text-sm leading-8 text-[#f5e9db]/75">{service.description}</p>
           </motion.div>
         ))}

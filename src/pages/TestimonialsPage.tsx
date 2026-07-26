@@ -11,8 +11,8 @@ export default function TestimonialsPage() {
             <div className="mb-6 h-1.5 w-16 rounded-full bg-[#ff7a1a]" />
             <p className="text-base leading-8 text-[#f5e9db]/80">“{item.quote}”</p>
             <div className="mt-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em]">{item.author}</p>
-              <p className="mt-1 text-sm uppercase tracking-[0.2em] text-[#f5e9db]/60">{item.role}</p>
+              <p className="text-sm font-semibold tracking-[0.2em]">{item.author}</p>
+              <p className="mt-1 text-sm tracking-[0.2em] text-[#f5e9db]/60">{item.role}</p>
             </div>
           </div>
         ))}

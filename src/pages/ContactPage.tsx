@@ -18,7 +18,7 @@ export default function ContactPage() {
         <div className="rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-[#ff7a1a]/12 to-transparent p-8 shadow-[0_30px_80px_rgba(0,0,0,0.25)] backdrop-blur-xl">
           <h3 className="text-2xl font-semibold uppercase tracking-[0.2em]">Quick Notes</h3>
           <p className="mt-5 text-base leading-8 text-[#f5e9db]/80">Available for branding, campaign design, editorial systems, social visuals, and polished print work. If you need a thoughtful creative partner, reach out and I’ll respond with a tailored approach.</p>
-          <a href={`mailto:${profile.email}`} className="mt-8 inline-flex rounded-full bg-[#ff7a1a] px-6 py-3 text-sm uppercase tracking-[0.3em] text-[#060606] transition hover:bg-[#ff9f4a]">Start a conversation</a>
+          <a href={`mailto:${profile.email}`} className="mt-8 inline-flex rounded-full bg-[#ff7a1a] px-6 py-3 text-sm tracking-[0.3em] text-[#060606] transition hover:bg-[#ff9f4a]">Start a conversation</a>
         </div>
       </div>
     </div>

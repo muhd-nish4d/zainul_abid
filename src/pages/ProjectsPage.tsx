@@ -14,9 +14,9 @@ export default function ProjectsPage() {
               <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-6">
                 <div>
                   <p className="text-[0.7rem] uppercase tracking-[0.35em] text-[#ff7a1a]">0{index + 1}</p>
-                  <h3 className="mt-2 text-2xl uppercase tracking-[0.16em]">{project.title}</h3>
+                  <h3 className="mt-2 text-2xl tracking-[0.16em]">{project.title}</h3>
                 </div>
-                <span className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[0.62rem] uppercase tracking-[0.26em] text-[#f5e9db]/70">{project.category}</span>
+                <span className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[0.62rem] tracking-[0.26em] text-[#f5e9db]/70">{project.category}</span>
               </div>
             </div>
             <div className="p-6">

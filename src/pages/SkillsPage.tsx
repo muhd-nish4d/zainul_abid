@@ -11,7 +11,7 @@ export default function SkillsPage() {
           <div className="mt-8 space-y-5">
             {software.map((tool) => (
               <div key={tool.name}>
-                <div className="mb-2 flex items-center justify-between text-sm uppercase tracking-[0.2em]">
+                <div className="mb-2 flex items-center justify-between text-sm tracking-[0.2em]">
                   <span>{tool.name}</span>
                   <span className="text-[#ff7a1a]">{tool.score}</span>
                 </div>
@@ -26,7 +26,7 @@ export default function SkillsPage() {
           <h3 className="text-2xl font-semibold uppercase tracking-[0.2em]">Capabilities</h3>
           <div className="mt-8 flex flex-wrap gap-3">
             {skills.map((skill) => (
-              <span key={skill} className="rounded-full border border-white/10 bg-black/25 px-4 py-2 text-sm uppercase tracking-[0.2em]">{skill}</span>
+              <span key={skill} className="rounded-full border border-white/10 bg-black/25 px-4 py-2 text-sm tracking-[0.2em]">{skill}</span>
             ))}
           </div>
         </div>

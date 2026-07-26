@@ -11,7 +11,7 @@ export default function ExperiencePage() {
             <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.35em] text-[#ff7a1a]">{item.year}</p>
-                <h3 className="mt-3 text-2xl font-semibold uppercase tracking-[0.18em]">{item.company}</h3>
+                <h3 className="mt-3 text-2xl font-semibold tracking-[0.18em]">{item.company}</h3>
                 <p className="mt-2 text-lg text-[#f5e9db]/80">{item.role}</p>
               </div>
               <ul className="space-y-3 text-sm leading-7 text-[#f5e9db]/80">

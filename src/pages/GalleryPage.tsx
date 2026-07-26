@@ -10,7 +10,7 @@ export default function GalleryPage() {
         {galleryItems.map((item) => (
           <div key={item.title} className="rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-[0_30px_80px_rgba(0,0,0,0.25)] backdrop-blur-xl">
             <PlaceholderFrame label={item.title} className="min-h-[260px]" />
-            <p className="mt-4 text-xs uppercase tracking-[0.3em] text-[#ff7a1a]">{item.category}</p>
+            <p className="mt-4 text-xs tracking-[0.3em] text-[#ff7a1a]">{item.category}</p>
           </div>
         ))}
       </div>

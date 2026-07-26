@@ -34,14 +34,14 @@ export default function LandingPage() {
               {profile.name}
             </h1>
             <p className="mt-6 max-w-xl text-base leading-8 text-[#f5e9db]/80">{profile.tagline}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            {/* <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/contact" className="group inline-flex items-center gap-2 rounded-full bg-[#ff7a1a] px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-[#060606] transition hover:bg-[#ff9f4a]">
                 Let&apos;s work together <FiArrowRight className="transition group-hover:translate-x-1" />
               </Link>
               <a href={profile.resumeUrl} className="rounded-full border border-white/15 px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-[#f5e9db] transition hover:border-[#ff7a1a] hover:text-[#ff7a1a]">
                 Download Resume
               </a>
-            </div>
+            </div> */}
             <div className="mt-8 flex flex-wrap gap-4 text-[0.72rem] uppercase tracking-[0.25em] text-[#f5e9db]/70">
               <a href={profile.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-2 transition hover:text-[#ff7a1a]"> <FiInstagram /> Instagram</a>
               <a href={`mailto:${profile.email}`} className="flex items-center gap-2 transition hover:text-[#ff7a1a]"> <FiMail /> Email</a>
@@ -61,9 +61,9 @@ export default function LandingPage() {
         <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
             <p className="text-[0.72rem] uppercase tracking-[0.35em] text-[#ff7a1a]">About</p>
-            <h2 className="mt-4 text-3xl uppercase tracking-[0.16em] sm:text-4xl">Designing with clarity, craft, and culture.</h2>
-            <p className="mt-6 text-base leading-8 text-[#f5e9db]/80">{profile.bio[0]}</p>
-            <p className="mt-4 text-base leading-8 text-[#f5e9db]/80">{profile.bio[1]}</p>
+            <h2 className="mt-4 text-3xl tracking-[0.16em] sm:text-4xl">Designing with clarity, craft, and culture.</h2>
+            <p className="mt-6 text-base leading-6 text-[#f5e9db]/80">{profile.bio[0]}</p>
+            <p className="mt-4 text-base leading-6 text-[#f5e9db]/80">{profile.bio[1]}</p>
             <Link to="/about" className="mt-8 inline-flex items-center gap-2 text-[0.72rem] uppercase tracking-[0.3em] text-[#f5e9db] transition hover:text-[#ff7a1a]">Read Full Story <FiArrowRight /></Link>
           </motion.div>
 
@@ -71,11 +71,11 @@ export default function LandingPage() {
             <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
               <p className="text-[0.7rem] uppercase tracking-[0.35em] text-[#ff7a1a]">Experience</p>
               <p className="mt-4 text-4xl font-semibold">{profile.experienceYears}</p>
-              <p className="mt-3 text-sm uppercase tracking-[0.24em] text-[#f5e9db]/70">Creative designer based in Doha, Qatar</p>
+              <p className="mt-3 text-sm tracking-[0.24em] text-[#f5e9db]/70">Creative designer based in Doha, Qatar</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-[#ff7a1a]/15 to-transparent p-6 backdrop-blur-xl">
               <p className="text-[0.7rem] uppercase tracking-[0.35em] text-[#ff7a1a]">Availability</p>
-              <p className="mt-4 text-xl uppercase tracking-[0.2em]">{profile.availability}</p>
+              <p className="mt-4 text-xl tracking-[0.2em]">{profile.availability}</p>
             </motion.div>
           </div>
         </div>
@@ -85,7 +85,7 @@ export default function LandingPage() {
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-[0.7rem] uppercase tracking-[0.35em] text-[#ff7a1a]">Featured Projects</p>
-            <h2 className="mt-2 text-3xl uppercase tracking-[0.16em] sm:text-4xl">Select work ready for a premium reveal.</h2>
+            <h2 className="mt-2 text-3xl tracking-[0.16em] sm:text-4xl">Select work ready for a premium reveal.</h2>
           </div>
           <Link to="/projects" className="text-[0.7rem] uppercase tracking-[0.3em] transition hover:text-[#ff7a1a]">View all</Link>
         </div>
@@ -97,9 +97,9 @@ export default function LandingPage() {
                 <div className="absolute inset-0 flex items-end justify-between p-6">
                   <div>
                     <p className="text-[0.7rem] uppercase tracking-[0.3em] text-[#ff7a1a]">0{index + 1}</p>
-                    <h3 className="mt-2 text-2xl uppercase tracking-[0.16em]">{project.title}</h3>
+                    <h3 className="mt-2 text-2xl tracking-[0.16em]">{project.title}</h3>
                   </div>
-                  <span className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[0.62rem] uppercase tracking-[0.26em] text-[#f5e9db]/70">{project.category}</span>
+                  <span className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[0.62rem] tracking-[0.26em] text-[#f5e9db]/70">{project.category}</span>
                 </div>
               </div>
               <div className="p-6">
@@ -115,7 +115,7 @@ export default function LandingPage() {
         <div className="mb-8 flex items-end justify-between gap-4">
           <div>
             <p className="text-[0.7rem] uppercase tracking-[0.35em] text-[#ff7a1a]">Services</p>
-            <h2 className="mt-2 text-3xl uppercase tracking-[0.16em] sm:text-4xl">Crafted for modern brands and cultural storytelling.</h2>
+            <h2 className="mt-2 text-3xl tracking-[0.16em] sm:text-4xl">Crafted for modern brands and cultural storytelling.</h2>
           </div>
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -125,7 +125,7 @@ export default function LandingPage() {
                 <span className="text-[0.7rem] uppercase tracking-[0.35em] text-[#ff7a1a]">0{index + 1}</span>
                 <div className="h-2.5 w-2.5 rounded-full bg-[#ff7a1a]" />
               </div>
-              <h3 className="text-xl uppercase tracking-[0.16em]">{service.title}</h3>
+              <h3 className="text-xl tracking-[0.16em]">{service.title}</h3>
               <p className="mt-4 text-sm leading-7 text-[#f5e9db]/75">{service.description}</p>
             </motion.div>
           ))}
@@ -140,8 +140,8 @@ export default function LandingPage() {
               {experiences.map((item) => (
                 <div key={item.company} className="border-l border-white/10 pl-5">
                   <p className="text-[0.7rem] uppercase tracking-[0.3em] text-[#ff7a1a]">{item.year}</p>
-                  <h3 className="mt-2 text-xl uppercase tracking-[0.16em]">{item.company}</h3>
-                  <p className="mt-1 text-sm uppercase tracking-[0.2em] text-[#f5e9db]/70">{item.role}</p>
+                  <h3 className="mt-2 text-xl tracking-[0.16em]">{item.company}</h3>
+                  <p className="mt-1 text-sm tracking-[0.2em] text-[#f5e9db]/70">{item.role}</p>
                 </div>
               ))}
             </div>
@@ -151,13 +151,13 @@ export default function LandingPage() {
             <p className="text-[0.7rem] uppercase tracking-[0.35em] text-[#ff7a1a]">Skills</p>
             <div className="mt-8 flex flex-wrap gap-3">
               {skills.map((skill) => (
-                <span key={skill} className="rounded-full border border-white/10 bg-black/30 px-4 py-2 text-[0.72rem] uppercase tracking-[0.24em] text-[#f5e9db]/80">{skill}</span>
+                <span key={skill} className="rounded-full border border-white/10 bg-black/30 px-4 py-2 text-[0.72rem] tracking-[0.24em] text-[#f5e9db]/80">{skill}</span>
               ))}
             </div>
             <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-black/25 p-6">
               <p className="text-[0.7rem] uppercase tracking-[0.35em] text-[#ff7a1a]">Testimonials</p>
               <p className="mt-4 text-base leading-8 text-[#f5e9db]/80">“{testimonials[0].quote}”</p>
-              <p className="mt-4 text-[0.72rem] uppercase tracking-[0.26em] text-[#f5e9db]/70">{testimonials[0].author}</p>
+              <p className="mt-4 text-[0.72rem] tracking-[0.26em] text-[#f5e9db]/70">{testimonials[0].author}</p>
             </div>
           </motion.div>
         </div>
@@ -168,7 +168,7 @@ export default function LandingPage() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-[0.72rem] uppercase tracking-[0.35em] text-[#ff7a1a]">Contact</p>
-              <h2 className="mt-3 text-3xl uppercase tracking-[0.16em] sm:text-4xl">Ready to shape something memorable?</h2>
+              <h2 className="mt-3 text-3xl tracking-[0.16em] sm:text-4xl">Ready to shape something memorable?</h2>
             </div>
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-[#ff7a1a] px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-[#060606] transition hover:bg-[#ff9f4a]">
               Start a conversation <FiArrowRight />
