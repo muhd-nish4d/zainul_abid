@@ -163,19 +163,53 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 lg:px-8" data-reveal>
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} className="rounded-[2.5rem] border border-[#ff7a1a]/20 bg-gradient-to-r from-[#ff7a1a]/15 via-transparent to-[#ffffff]/5 p-8 backdrop-blur-xl sm:p-10 lg:p-12">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p className="text-[0.72rem] uppercase tracking-[0.35em] text-[#ff7a1a]">Contact</p>
-              <h2 className="mt-3 text-3xl tracking-[0.16em] sm:text-4xl">Ready to shape something memorable?</h2>
-            </div>
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-[#ff7a1a] px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-[#060606] transition hover:bg-[#ff9f4a]">
-              Start a conversation <FiArrowRight />
-            </Link>
-          </div>
-        </motion.div>
-      </section>
+      <section
+  className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 lg:px-8"
+  data-reveal
+>
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }}
+    className="rounded-[2.5rem] border border-[#ff7a1a]/20 bg-gradient-to-r from-[#ff7a1a]/15 via-transparent to-[#ffffff]/5 p-8 backdrop-blur-xl sm:p-10 lg:p-12"
+  >
+    <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+      <div>
+        <p className="text-[0.72rem] uppercase tracking-[0.35em] text-[#ff7a1a]">
+          Contact
+        </p>
+
+        <h2 className="mt-3 text-3xl tracking-[0.16em] sm:text-4xl">
+          Ready to shape something memorable?
+        </h2>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link
+            to="/contact"
+            className="group inline-flex items-center gap-2 rounded-full bg-[#ff7a1a] px-6 py-3 text-[0.72rem] tracking-[0.3em] text-[#060606] transition hover:bg-[#ff9f4a]"
+          >
+            Let&apos;s work together
+            <FiArrowRight className="transition group-hover:translate-x-1" />
+          </Link>
+
+          <a
+            href={profile.resumeUrl}
+            className="rounded-full border border-white/15 px-6 py-3 text-[0.72rem] tracking-[0.3em] text-[#f5e9db] transition hover:border-[#ff7a1a] hover:text-[#ff7a1a]"
+          >
+            Download Resume
+          </a>
+        </div>
+      </div>
+
+      {/* <Link
+        to="/contact"
+        className="inline-flex items-center gap-2 rounded-full bg-[#ff7a1a] px-6 py-3 text-[0.72rem] tracking-[0.3em] text-[#060606] transition hover:bg-[#ff9f4a]"
+      >
+        Start a conversation <FiArrowRight />
+      </Link> */}
+    </div>
+  </motion.div>
+</section>
     </div>
   );
 }
