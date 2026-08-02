@@ -1,3 +1,7 @@
+import keraleeyamImg from "../assets/works/1.jpg";
+// import editorialImg from "../assets/projects/editorial.jpg";
+// import campaignImg from "../assets/projects/campaign.jpg";
+
 export const profile = {
   name: 'SAINUL ABID C',
   nickname: 'Zayn',
@@ -12,12 +16,12 @@ export const profile = {
   phone: '+974 30721046',
   whatsapp: '+91 7907548219',
   instagram: 'https://www.instagram.com/itszayn.here',
-  linkedin: 'https://www.linkedin.com',
+  linkedin: 'https://www.linkedin.com/in/sainul-abid-c-59b9721a0',
   resumeUrl: '/resume.pdf',
   timezone: 'Asia/Kolkata',
   languages: ['English', 'Malayalam'],
   availability: 'Available for Work',
-  experienceYears: '4 Years',
+  experienceYears: '5 Years',
   currentRole: 'Creative Designer',
   freelancer: 'Freelancer',
 }
@@ -75,6 +79,12 @@ export const skills = [
 
 export const experiences = [
   {
+    company: 'Mediaplus W.L.L',
+    role: 'Creative designer',
+    year: '2025 Sept - Present',
+    highlights: ['Creative design', 'Branding', 'Event Design'],
+  },
+  {
     company: 'Specialist Equipment Trading LLC',
     role: 'Creative Designer',
     year: '2024',
@@ -107,8 +117,8 @@ export const certificates = [
 export const testimonials = [
   {
     quote: 'Zain brought warmth and structure to our visual language. Every detail felt intentional, and the final result felt elevated.',
-    author: 'Amina S.',
-    role: 'Marketing Lead',
+    author: 'Amanulla Vadakkangara',
+    role: 'CEO - Mediaplus W.L.L',
   },
   {
     quote: 'The balance between creativity and clarity was exceptional. Our campaign felt more polished than ever.',
@@ -124,21 +134,27 @@ export const testimonials = [
 
 export const projects = [
   {
-    title: 'Replace with your project',
-    category: 'Brand Identity',
-    blurb: 'A polished placeholder layout ready for your next case study or launch story.',
+    title: "Keraleeyam 2023",
+    category: "Creative Project",
+    blurb:
+      "As the Creative Project Designer for Keraleeyam, Kerala's flagship annual festival held in Thiruvananthapuram, I was responsible for developing and executing the event's visual identity across a wide range of platforms. Keraleeyam celebrates Kerala's rich culture, heritage, and achievements through seminars, exhibitions, trade fairs, film festivals, food festivals, cultural programs, and business events hosted across more than 40 venues. My role involved creating impactful branding, promotional materials, event graphics, and creative assets that ensured a consistent and engaging visual experience throughout the festival.",
+    image: keraleeyamImg,
   },
-  {
-    title: 'Replace with your project',
-    category: 'Editorial System',
-    blurb: 'Swap in your own visuals, copy, and metrics to create a custom portfolio story.',
-  },
-  {
-    title: 'Replace with your project',
-    category: 'Campaign Design',
-    blurb: 'The structure is built to feel premium while remaining easy to edit later.',
-  },
-]
+  // {
+  //   title: "Replace with your project",
+  //   category: "Editorial System",
+  //   blurb:
+  //     "Swap in your own visuals, copy, and metrics to create a custom portfolio story.",
+  //   // image: editorialImg,
+  // },
+  // {
+  //   title: "Replace with your project",
+  //   category: "Campaign Design",
+  //   blurb:
+  //     "The structure is built to feel premium while remaining easy to edit later.",
+  //   // image: campaignImg,
+  // },
+];
 
 export const galleryItems = [
   { title: 'Add Gallery Image', category: 'Editorial' },
