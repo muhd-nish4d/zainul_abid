@@ -6,8 +6,9 @@ import keraleeyamImg5 from "../assets/project_images/5.jpg";
 import keraleeyamImg6 from "../assets/project_images/6.jpg";
 import keraleeyamImg7 from "../assets/project_images/7.jpg";
 import keraleeyamImg8 from "../assets/project_images/8.jpg";
-// import editorialImg from "../assets/projects/editorial.jpg";
-// import campaignImg from "../assets/projects/campaign.jpg";
+import im1 from "../assets/works/6.jpg";
+import im2 from "../assets/works/7.jpg";
+// import keraleeyamImg8 from "../assets/project_images/8.jpg";
 
 export const profile = {
   name: 'SAINUL ABID',
@@ -38,7 +39,7 @@ export const navLinks = [
   { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
   { to: '/projects', label: 'Projects' },
-  { to: '/gallery', label: 'Gallery' },
+  // { to: '/gallery', label: 'Gallery' },
   { to: '/experience', label: 'Experience' },
   { to: '/education', label: 'Education' },
   { to: '/skills', label: 'Skills' },
@@ -148,20 +149,21 @@ export const projects = [
     image: keraleeyamImg,
     relatedImage: [keraleeyamImg2, keraleeyamImg3, keraleeyamImg4, keraleeyamImg5, keraleeyamImg6, keraleeyamImg7, keraleeyamImg8],
   },
-  // {
-  //   title: "Replace with your project",
-  //   category: "Editorial System",
-  //   blurb:
-  //     "Swap in your own visuals, copy, and metrics to create a custom portfolio story.",
-  //   // image: editorialImg,
-  // },
-  // {
-  //   title: "Replace with your project",
-  //   category: "Campaign Design",
-  //   blurb:
-  //     "The structure is built to feel premium while remaining easy to edit later.",
-  //   // image: campaignImg,
-  // },
+  {
+    title: "International Malayali Logo Design",
+
+    category: "Branding & Logo Design",
+
+    blurb:
+      "International Malayali is an online news portal based in Qatar, serving the global Malayali community with the latest news, stories, and updates from Kerala, Qatar, and around the world. As the Logo Designer, I was responsible for developing a distinctive and modern visual identity that reflects the platform's connection with the international Malayali community. The logo was designed to balance Malayalam cultural identity with a contemporary digital aesthetic, making it versatile for use across the news portal, social media platforms, digital publications, and promotional materials. The final identity provides International Malayali with a recognizable and professional brand presence across multiple digital platforms.",
+
+    image: im1,
+
+    relatedImage: [
+      im2
+    ],
+  },
+
 ];
 
 export const galleryItems = [

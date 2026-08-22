@@ -4,7 +4,7 @@ import LandingPage from './pages/LandingPage';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ProjectsPage from './pages/ProjectsPage';
-import GalleryPage from './pages/GalleryPage';
+// import GalleryPage from './pages/GalleryPage';
 import ExperiencePage from './pages/ExperiencePage';
 import EducationPage from './pages/EducationPage';
 import SkillsPage from './pages/SkillsPage';
@@ -21,7 +21,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/gallery" element={<GalleryPage />} />
+          {/* <Route path="/gallery" element={<GalleryPage />} /> */}
           <Route path="/experience" element={<ExperiencePage />} />
           <Route path="/education" element={<EducationPage />} />
           <Route path="/skills" element={<SkillsPage />} />

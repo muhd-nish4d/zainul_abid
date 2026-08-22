@@ -16,10 +16,10 @@
     <loc>https://yourdomain.com/projects</loc>
     <priority>0.8</priority>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://yourdomain.com/gallery</loc>
     <priority>0.7</priority>
-  </url>
+  </url> -->
   <url>
     <loc>https://yourdomain.com/contact</loc>
     <priority>0.8</priority>
