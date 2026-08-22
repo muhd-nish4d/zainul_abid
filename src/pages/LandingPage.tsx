@@ -5,11 +5,12 @@ import { FiArrowRight, FiInstagram, FiLinkedin, FiMail } from 'react-icons/fi';
 import heroImage from '../assets/hero.jpeg';
 import { experiences, profile, projects, services, skills, testimonials } from '../data/content';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import ProjectDetailModal, { type Project } from '../components/ProjectDetailModal';
 
 export default function LandingPage() {
   useScrollReveal();
   const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
-  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const handleTilt = (event: MouseEvent<HTMLDivElement>) => {
     const bounds = event.currentTarget.getBoundingClientRect();
@@ -159,7 +160,15 @@ export default function LandingPage() {
         </div>
         <div className="grid gap-6 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <motion.article key={project.title} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} whileHover={{ y: -8, scale: 1.01 }} className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl">
+            <motion.article
+              key={project.title}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              whileHover={{ y: -8, scale: 1.01 }}
+              onClick={() => setSelectedProject(project as Project)}
+              className="group cursor-pointer overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl transition-shadow hover:shadow-[0_20px_50px_rgba(255,122,26,0.08)]"
+            >
               <div className="relative h-64 overflow-hidden">
                 {/* Background Image */}
                 <img
@@ -192,32 +201,34 @@ export default function LandingPage() {
               </div>
               <div className="p-6">
                 <p className="text-sm leading-7 text-[#f5e9db]/70">
-                  {expanded[index]
-                    ? project.blurb
-                    : `${project.blurb.slice(0, 100)}${project.blurb.length > 100 ? "..." : ""
-                    }`}
+                  `${project.blurb.slice(0, 100)}${project.blurb.length > 100 ? "..." : ""
+                  }`
                 </p>
 
-                {project.blurb.length > 100 && (
+                {/* {project.blurb.length > 100 && (
                   <button
-                    onClick={() =>
+                    onClick={(e) => {
+                      e.stopPropagation();
                       setExpanded((prev) => ({
                         ...prev,
                         [index]: !prev[index],
-                      }))
-                    }
+                      }));
+                    }}
                     className="mt-2 text-xs font-medium uppercase tracking-[0.2em] text-[#ff7a1a] hover:text-white transition"
                   >
                     {expanded[index] ? "Read Less" : "Read More"}
                   </button>
-                )}
+                )} */}
 
-                <Link
-                  to="/projects"
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedProject(project as Project);
+                  }}
                   className="mt-6 inline-flex items-center gap-2 text-[0.72rem] uppercase tracking-[0.3em] text-[#f5e9db] transition hover:text-[#ff7a1a]"
                 >
                   View Project <FiArrowRight />
-                </Link>
+                </button>
               </div>
             </motion.article>
           ))}
@@ -323,6 +334,12 @@ export default function LandingPage() {
           </div>
         </motion.div>
       </section>
+
+      <ProjectDetailModal
+        isOpen={selectedProject !== null}
+        onClose={() => setSelectedProject(null)}
+        project={selectedProject}
+      />
     </div>
   );
 }

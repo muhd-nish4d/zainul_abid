@@ -1,8 +1,12 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '../components/SectionHeading';
 import { projects } from '../data/content';
+import ProjectDetailModal, { type Project } from '../components/ProjectDetailModal';
 
 export default function ProjectsPage() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
       <SectionHeading eyebrow="Projects" title="A portfolio ready for your next chapter" description="The layouts below are intentionally polished placeholders so your real case studies can be dropped in later without redesigning the structure." />
@@ -14,7 +18,8 @@ export default function ProjectsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: index * 0.07 }}
             whileHover={{ y: -8, scale: 1.01 }}
-            className="group overflow-hidden rounded-[2.2rem] border border-white/10 bg-white/5 backdrop-blur-xl"
+            onClick={() => setSelectedProject(project as Project)}
+            className="group cursor-pointer overflow-hidden rounded-[2.2rem] border border-white/10 bg-white/5 backdrop-blur-xl transition-shadow hover:shadow-[0_20px_50px_rgba(255,122,26,0.08)]"
           >
             <div className="relative h-64 overflow-hidden">
               {/* Background Image */}
@@ -58,6 +63,12 @@ export default function ProjectsPage() {
           </motion.article>
         ))}
       </div>
+
+      <ProjectDetailModal
+        isOpen={selectedProject !== null}
+        onClose={() => setSelectedProject(null)}
+        project={selectedProject}
+      />
     </div>
   );
 }

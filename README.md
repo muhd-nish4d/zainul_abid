@@ -1,6 +1,6 @@
 # Zainul Abid Portfolio
 
-A handcrafted, high-end portfolio experience for graphic designer SAINUL ABID C, built with React 19, Vite 8, TypeScript, Tailwind CSS, Framer Motion, GSAP, and Lenis.
+A handcrafted, high-end portfolio experience for graphic designer SAINUL ABID, built with React 19, Vite 8, TypeScript, Tailwind CSS, Framer Motion, GSAP, and Lenis.
 
 ## Features
 - Multi-page portfolio experience with handcrafted editorial styling

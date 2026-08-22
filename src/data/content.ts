@@ -1,9 +1,16 @@
-import keraleeyamImg from "../assets/works/1.jpg";
+import keraleeyamImg from "../assets/project_images/1.jpg";
+import keraleeyamImg2 from "../assets/project_images/2.jpg";
+import keraleeyamImg3 from "../assets/project_images/3.jpg";
+import keraleeyamImg4 from "../assets/project_images/4.jpg";
+import keraleeyamImg5 from "../assets/project_images/5.jpg";
+import keraleeyamImg6 from "../assets/project_images/6.jpg";
+import keraleeyamImg7 from "../assets/project_images/7.jpg";
+import keraleeyamImg8 from "../assets/project_images/8.jpg";
 // import editorialImg from "../assets/projects/editorial.jpg";
 // import campaignImg from "../assets/projects/campaign.jpg";
 
 export const profile = {
-  name: 'SAINUL ABID C',
+  name: 'SAINUL ABID',
   nickname: 'Zayn',
   brandName: 'Zainul Abid',
   tagline: 'Creative Graphic Designer',
@@ -139,6 +146,7 @@ export const projects = [
     blurb:
       "As the Creative Project Designer for Keraleeyam, Kerala's flagship annual festival held in Thiruvananthapuram, I was responsible for developing and executing the event's visual identity across a wide range of platforms. Keraleeyam celebrates Kerala's rich culture, heritage, and achievements through seminars, exhibitions, trade fairs, film festivals, food festivals, cultural programs, and business events hosted across more than 40 venues. My role involved creating impactful branding, promotional materials, event graphics, and creative assets that ensured a consistent and engaging visual experience throughout the festival.",
     image: keraleeyamImg,
+    relatedImage: [keraleeyamImg2, keraleeyamImg3, keraleeyamImg4, keraleeyamImg5, keraleeyamImg6, keraleeyamImg7, keraleeyamImg8],
   },
   // {
   //   title: "Replace with your project",
