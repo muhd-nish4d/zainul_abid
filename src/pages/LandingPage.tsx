@@ -201,8 +201,7 @@ export default function LandingPage() {
               </div>
               <div className="p-6">
                 <p className="text-sm leading-7 text-[#f5e9db]/70">
-                  `${project.blurb.slice(0, 100)}${project.blurb.length > 100 ? "..." : ""
-                  }`
+                  {project.blurb.slice(0, 100)}{project.blurb.length > 100 ? "..." : ""}
                 </p>
 
                 {/* {project.blurb.length > 100 && (

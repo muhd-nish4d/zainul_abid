@@ -6,6 +6,7 @@ import keraleeyamImg5 from "../assets/project_images/5.jpg";
 import keraleeyamImg6 from "../assets/project_images/6.jpg";
 import keraleeyamImg7 from "../assets/project_images/7.jpg";
 import keraleeyamImg8 from "../assets/project_images/8.jpg";
+import logoDesignCover from "../assets/add_on/360_F_226078263_4B8uckQ6viZyobVSXgnmvAbQajMaFCS9.jpg";
 import im1 from "../assets/works/6.jpg";
 import im2 from "../assets/works/7.jpg";
 // import keraleeyamImg8 from "../assets/project_images/8.jpg";
@@ -157,9 +158,10 @@ export const projects = [
     blurb:
       "International Malayali is an online news portal based in Qatar, serving the global Malayali community with the latest news, stories, and updates from Kerala, Qatar, and around the world. As the Logo Designer, I was responsible for developing a distinctive and modern visual identity that reflects the platform's connection with the international Malayali community. The logo was designed to balance Malayalam cultural identity with a contemporary digital aesthetic, making it versatile for use across the news portal, social media platforms, digital publications, and promotional materials. The final identity provides International Malayali with a recognizable and professional brand presence across multiple digital platforms.",
 
-    image: im1,
+    image: logoDesignCover,
 
     relatedImage: [
+      im1,
       im2
     ],
   },

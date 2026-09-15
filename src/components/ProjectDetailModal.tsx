@@ -86,11 +86,11 @@ export default function ProjectDetailModal({ isOpen, onClose, project }: Project
 
             {/* Layout Grid */}
             <div className="grid max-h-[85vh] grid-cols-1 overflow-y-auto md:grid-cols-12 md:overflow-visible">
-              
+
               {/* Left Column: Image Previewer */}
               <div className="flex flex-col gap-4 p-6 sm:p-8 md:col-span-7">
                 {/* Main Large Image Display */}
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-black/20 md:aspect-[3/2]">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-black/30 md:aspect-[3/2]">
                   <AnimatePresence mode="wait">
                     <motion.img
                       key={activeImage}
@@ -100,7 +100,7 @@ export default function ProjectDetailModal({ isOpen, onClose, project }: Project
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.25 }}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain"
                     />
                   </AnimatePresence>
                 </div>
@@ -112,11 +112,10 @@ export default function ProjectDetailModal({ isOpen, onClose, project }: Project
                       <button
                         key={idx}
                         onClick={() => setActiveImage(img)}
-                        className={`relative aspect-[4/3] h-16 flex-shrink-0 overflow-hidden rounded-xl border transition-all duration-300 sm:h-20 ${
-                          activeImage === img
-                            ? 'border-[#ff7a1a] scale-[0.98] ring-2 ring-[#ff7a1a]/20'
-                            : 'border-white/10 opacity-50 hover:opacity-100'
-                        }`}
+                        className={`relative aspect-[4/3] h-16 flex-shrink-0 overflow-hidden rounded-xl border transition-all duration-300 sm:h-20 ${activeImage === img
+                          ? 'border-[#ff7a1a] scale-[0.98] ring-2 ring-[#ff7a1a]/20'
+                          : 'border-white/10 opacity-50 hover:opacity-100'
+                          }`}
                       >
                         <img
                           src={img}
